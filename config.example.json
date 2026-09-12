@@ -1,0 +1,5 @@
+{
+  "backend": "https://ibnmohapfeogfpxemaaz.supabase.co/functions/v1/vap-device",
+  "deviceName": "VAP Chrome",
+  "note": "Do not put the private device token in this file. Enter it in VAP Settings at runtime."
+}

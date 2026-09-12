@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "VAP — VERTEX AI PA",
+  "version": "1.3.3",
+  "description": "VAP Chrome branch for the single central VAP brain — automatic pairing/repair, central memory/tasks/reminders, Vault capture, mission relay, voice, Think modes and controlled browser actions.",
+  "minimum_chrome_version": "114",
+  "permissions": [
+    "activeTab",
+    "alarms",
+    "contextMenus",
+    "notifications",
+    "scripting",
+    "sidePanel",
+    "storage"
+  ],
+  "optional_host_permissions": [
+    "https://*.instagram.com/*",
+    "https://web.whatsapp.com/*",
+    "https://mail.google.com/*",
+    "https://*.canva.com/*",
+    "https://*.higgsfield.ai/*"
+  ],
+  "host_permissions": [
+    "https://ibnmohapfeogfpxemaaz.supabase.co/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open VAP"
+  },
+  "side_panel": {
+    "default_path": "src/sidepanel.html"
+  },
+  "commands": {
+    "open-vap": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+V",
+        "mac": "Command+Shift+V"
+      },
+      "description": "Open VAP"
+    },
+    "capture-to-vault": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Capture current page for VAP Vault"
+    }
+  }
+}
